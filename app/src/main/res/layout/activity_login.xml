@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,32 +29,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_marginBottom="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/nidd_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_nidd_logo"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/nidd_logo"
-                    android:layout_marginTop="25dp"
-                    android:textStyle="bold"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/colorWhite"
-                    android:text="@string/ic_login_text"/>
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="HardcodedText">
 
-            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="@string/ic_login_text"/>
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
@@ -64,12 +56,12 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
-
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
 
                 <EditText
                     android:id="@+id/password"
@@ -94,8 +86,17 @@
                 android:text="@string/action_sign_in"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
+                android:scaleX="0"
+                android:scaleY="0"
                 android:background="@drawable/login_custom_button"/>
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+    <ImageView
+        android:id="@+id/nidd_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_nidd_logo"
+        tools:visibility="gone"/>
+</FrameLayout>
