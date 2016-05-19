@@ -8,28 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".views.LoginActivity"
+    tools:context=".views.SignInActivity"
     android:background="@drawable/wallpaper">
-
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone"/>
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
             tools:ignore="HardcodedText">
 
@@ -37,31 +24,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:layout_marginTop="15dp"
                 android:layout_gravity="center"
                 android:textColor="@color/colorWhite"
                 android:text="@string/ic_login_text"/>
 
 
-            <android.support.design.widget.TextInputLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/round_ed">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
+                    android:paddingLeft="30dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/signinColor"
+                    android:singleLine="true"
+                   />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp">
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/email"
+                    android:background="@color/signinColor" />
 
                 <EditText
                     android:id="@+id/password"
@@ -70,12 +66,17 @@
                     android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
+                    android:textSize="16sp"
+                    android:textColorHint="@color/signinColor"
+                    android:textColor="@color/signinColor"
+                    android:paddingLeft="30dp"
+                    android:background="@null"
+                    android:layout_below="@+id/view1"
+                    android:singleLine="true"
+                    android:paddingTop="10dp"/>
+            </RelativeLayout>
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/email_sign_in_button"
@@ -89,14 +90,13 @@
                 android:scaleX="0"
                 android:scaleY="0"
                 android:background="@drawable/login_custom_button"/>
-
         </LinearLayout>
-    </ScrollView>
     <ImageView
-        android:id="@+id/nidd_logo"
+        android:id="@+id/nidd_amlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/ic_nidd_logo"
+        android:contentDescription="@string/nidd_logo"
         tools:visibility="gone"/>
 </FrameLayout>

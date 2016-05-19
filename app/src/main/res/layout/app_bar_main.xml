@@ -12,7 +12,6 @@
         android:layout_height="wrap_content">
 
         <include layout="@layout/toolbar"/>
-        <include layout="@layout/searchbar"/>
 
     </android.support.design.widget.AppBarLayout>
 </android.support.design.widget.CoordinatorLayout>

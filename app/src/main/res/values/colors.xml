@@ -2,10 +2,11 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#26573E</color>
-    <color name="colorAccent">#F0C327</color>
+    <color name="colorAccent">#f1d674</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="search_edit">#336E50</color>
     <color name="colorBlack">#000000</color>
     <color name="colorLightGrey">#b4b3b3</color>
-
+    <color name="signinColor">#7e877d</color>
+    <color name="colorWhiteR">#f9f8f8</color>
 </resources>

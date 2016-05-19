@@ -42,4 +42,10 @@ public interface PresenterOps<RequiredViewOps extends ContextView> {
      * @param activityClass
      */
     void goToNextActivity(Class<? extends Activity> activityClass);
+
+    /**
+     * hooks method dispatched by GenericActivity framework to
+     * for intro anim
+     * @param hasFocus
+     */
 }

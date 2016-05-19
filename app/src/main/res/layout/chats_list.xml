@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Thumbnail Image -->
+    <LinearLayout
+        android:id="@+id/img_lay"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="3dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/visitor_imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/avatar_moss" />
+    </LinearLayout>
+
+    <!--Visitor Name-->
+    <pttextview.widget.PTTextView
+        android:id="@+id/visitor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Alice Whiteman"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:typeface="pt_sans_narrow_bold"
+        android:layout_alignTop="@+id/img_lay"
+        android:layout_toRightOf="@+id/img_lay"/>
+
+    <!-- Time-->
+    <pttextview.widget.PTTextView
+        android:id="@+id/created_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="11:45AM"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:layout_alignRight="@+id/visitor_name"
+        android:layout_alignParentRight="true"
+        app:typeface="pt_sans_narrow_bold" />
+
+    <!-- Last Message-->
+    <pttextview.widget.PTTextView
+        android:id="@+id/visitor_lastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steve.Great Thanks"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="17sp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/img_lay"
+        android:layout_below="@+id/visitor_name"
+        app:typeface="pt_sans_narrow_regular"
+        />
+
+
+    <!-- COUNTER-->
+    <pttextview.widget.PTTextView
+        android:id="@+id/chat_Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="14sp"
+        android:paddingTop="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:typeface="pt_sans_narrow_regular"/>
+
+</RelativeLayout>

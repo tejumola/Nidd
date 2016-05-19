@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/avatar_moss" />
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:paddingLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <pttextview.widget.PTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="Alice Whiteman"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:typeface="pt_sans_narrow_bold" />
+
+            <pttextview.widget.PTTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steve.Great Thanks"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="17sp"
+                android:paddingTop="1dp"
+                app:typeface="pt_sans_narrow_regular"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <pttextview.widget.PTTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="11:45AM"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:typeface="pt_sans_narrow_bold" />
+
+            <pttextview.widget.PTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YESTERDAY"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:paddingTop="1dp"
+                app:typeface="pt_sans_narrow_regular"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -11,15 +11,26 @@
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/containerView">
+    </FrameLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="255dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/colorWhite"
+        android:background="@color/colorWhiteR"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+        app:itemIconTint="@drawable/nav_item_color"
+        app:itemTextColor="@drawable/nav_item_color"
+        app:itemBackground="@drawable/nav_bg_selector"/>
 </android.support.v4.widget.DrawerLayout>
